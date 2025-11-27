@@ -1,1016 +1,1312 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>OlyLife THz Tera-P90 – Vente & Location</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OlyLife THz Tera-P90 – Vente & Location</title>
 
-  <!-- Icons & Fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --blue-dark: #020617;
-      --blue: #0f172a;
-      --blue-soft: #1e293b;
-      --accent: #f97316;   /* orange */
-      --emerald: #10b981;
-      --light: #ffffff;
-      --gray: #f3f4f6;
-      --text-dark: #111827;
-      --text-light: #6b7280;
-      --radius-xl: 26px;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.35);
-    }
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    body {
-      background: radial-gradient(circle at top left, #1f2937 0, #020617 45%, #000 100%);
-      color: var(--text-dark);
-      min-height: 100vh;
-      padding: 18px;
-    }
-
-    /* ===== GRID DE BASE ===== */
-    .parent {
-      max-width: 100%;
-      margin: 0 auto;
-      display: grid;
-      grid-template-rows: auto repeat(6, minmax(0, 1fr)) auto;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
-      min-height: calc(100vh - 36px);
-    }
-
-    .div1 {
-      grid-column: 1 / -1;
-      grid-row: 1 / 2;
-      position: relative;
-      background: radial-gradient(circle at top left, #1d4ed8 0, #0f172a 40%, #020617 100%);
-      border-radius: var(--radius-xl);
-      color: #f9fafb;
-      padding: 22px 28px 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .div5 {
-      grid-column: 5 / 6;
-      grid-row: 2 / 8;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      height: 100%;
-    }
-
-    .div7 {
-      grid-column: 2 / 5;
-      grid-row: 2 / 8;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .div8 {
-      grid-column: 1 / -1;
-      grid-row: 8 / 9;
-    }
-
-    .div9 {
-      grid-column: 1 / 2;
-      grid-row: 2 / 8;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    /* ===== HEADER / HERO ===== */
-
-    .hero-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 18px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .brand-logo {
-      width: 180px;              /* largeur du logo */
-      height: 48px;              /* hauteur fixe propre */
-      border-radius: 999px;      /* effet pill / premium */
-      background: rgba(255, 255, 255, 1);
-      padding: 4px 10px;         /* respirations autour du logo */
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  /* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-    .brand-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;       /* garde les proportions du logo */
-      border-radius: 999px;
-      margin: 0;                 /* supprime le margin-bottom qui cassait l’alignement */
-      display: block;
-    }
-
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-text span:first-child {
-      font-weight: 700;
-      letter-spacing: .08em;
-      font-size: .8rem;
-      text-transform: uppercase;
-      color: #e5e7eb;
-    }
-
-    .brand-text span:last-child {
-      font-weight: 600;
-      font-size: 1.05rem;
-      color: #f9fafb;
-    }
-
-    .hero-top .badge {
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: .78rem;
-      font-weight: 500;
-      background: rgba(15, 118, 110, .12);
-      border: 1px solid rgba(45, 212, 191, .35);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: #ccfbf1;
-    }
-
-    .hero-main {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 26px;
-      align-items: center;
-    }
-
-    .hero-copy h1 {
-      font-size: clamp(1.9rem, 3vw, 2.4rem);
-      line-height: 1.15;
-      margin-bottom: 8px;
-    }
-
-    .hero-copy h1 span {
-      color: var(--accent);
-    }
-
-    .hero-copy p {
-      font-size: .96rem;
-      color: #e5e7eb;
-      margin-bottom: 14px;
-      max-width: 520px;
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 18px;
-      font-size: .8rem;
-    }
-
-    .hero-badge {
-      padding: 6px 10px;
-      border-radius: 999px;
-      backdrop-filter: blur(12px);
-      background: rgba(15, 23, 42, .75);
-      border: 1px solid rgba(148, 163, 184, .5);
-      display: flex;
-      gap: 6px;
-      align-items: center;
-      color: #e5e7eb;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .btn-primary,
-    .btn-ghost {
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      padding: 11px 20px;
-      font-size: .9rem;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all .22s ease;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #f97316, #fb923c);
-      color: #0b1120;
-      box-shadow: 0 12px 30px rgba(248, 150, 69, .6);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px) scale(1.01);
-      box-shadow: 0 18px 40px rgba(248, 150, 69, .8);
-    }
-
-    .btn-ghost {
-      background: rgba(15, 23, 42, .75);
-      color: #e5e7eb;
-      border: 1px solid rgba(148, 163, 184, .6);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(15, 23, 42, .95);
-    }
-
-    .hero-visual {
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .hero-card {
-      position: relative;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 70%);
-      border-radius: 30px;
-      padding: 16px;
-      border: 1px solid rgba(148, 163, 184, .35);
-      box-shadow: var(--shadow-soft);
-      max-width: 320px;
-      width: 100%;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      border-radius: inherit;
-      padding: 1px;
-      background: linear-gradient(135deg, rgba(248, 250, 252, .2), rgba(249, 115, 22, .35), rgba(45, 212, 191, .3));
-      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-    }
-
-    .hero-product-img {
-      width: 100%;
-      border-radius: 22px;
-      overflow: hidden;
-      background: radial-gradient(circle at top, #111827, #020617);
-      margin-bottom: 10px;
-    }
-
-    .hero-product-img img {
-      width: 100%;
-      display: block;
-      object-fit: contain;
-      transform: translateY(4px);
-    }
-
-    .hero-card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: .78rem;
-      color: #e5e7eb;
-    }
-
-    .hero-card-footer span.price {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fbbf24;
-    }
-
-    .hero-glow {
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(250, 204, 21, .18), transparent 60%);
-      filter: blur(4px);
-      right: 0;
-      top: 5%;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    /* ===== COLONNE GAUCHE – AVANTAGES ===== */
-
-    .benefit-card {
-      background: rgba(15, 23, 42, .92);
-      border-radius: 22px;
-      padding: 16px 16px 14px;
-      color: #e5e7eb;
-      border: 1px solid rgba(55, 65, 81, .9);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, .8);
-    }
-
-    .benefit-card h3 {
-      font-size: .95rem;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .benefit-card p {
-      font-size: .78rem;
-      color: #d1d5db;
-    }
-
-    .benefit-chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 8px;
-    }
-
-    .benefit-chip {
-      font-size: .72rem;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: rgba(31, 41, 55, .9);
-      border: 1px solid rgba(75, 85, 99, .9);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #e5e7eb;
-    }
-
-    /* Petites listes pour compléter les cartes */
-    .benefit-list,
-    .offer-list {
-      list-style: none;
-      margin: 6px 0 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .benefit-list li,
-    .offer-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-      font-size: .74rem;
-      color: var(--text-light);
-    }
-
-    .benefit-list li i,
-    .offer-list li i {
-      margin-top: 2px;
-      font-size: .7rem;
-      color: #22c55e;
-    }
-
-    /* ===== COLONNE CENTRALE – FICHE PRODUIT ===== */
-
-    .div7-inner {
-      flex: 1 1 auto;
-      background: #f9fafb;
-      border-radius: var(--radius-xl);
-      padding: 20px 22px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, .25);
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      overflow-y: auto;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-
-    .section-header h2 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-dark);
-    }
-
-    .section-header span {
-      font-size: .8rem;
-      color: var(--text-light);
-    }
-
-    .specs-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      font-size: .78rem;
-      color: var(--text-light);
-      flex-shrink: 0;
-    }
-
-    .spec-item {
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 9px 10px;
-      border: 1px solid #e5e7eb;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .spec-item span.label {
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      color: #9ca3af;
-    }
-
-    .spec-item span.value {
-      font-size: .82rem;
-      font-weight: 600;
-      color: #111827;
-    }
-
-    .highlight-strip {
-      margin-top: 4px;
-      padding: 10px 11px;
-      border-radius: 14px;
-      background: linear-gradient(90deg, rgba(16, 185, 129, .09), rgba(59, 130, 246, .06));
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: .78rem;
-      color: #065f46;
-      border: 1px dashed rgba(16, 185, 129, .6);
-      flex-shrink: 0;
-    }
-
-    .highlight-strip i {
-      color: #10b981;
-    }
-
-    /* ==== DÉMO VIDÉO ==== */
-
-    .video-card {
-      margin-top: 6px;
-      border-radius: 18px;
-      padding: 10px 12px 12px;
-      background: #0b1120;
-      color: #e5e7eb;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-
-    .video-wrapper {
-      width: 100%;
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .video-wrapper video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .video-meta {
-      font-size: .78rem;
-    }
-
-    .video-meta span {
-      display: block;
-      font-size: .7rem;
-      color: #9ca3af;
-    }
-
-    /* ===== COLONNE DROITE – VENTE / LOCATION ===== */
-
-    .div5-card {
-      background: #f9fafb;
-      border-radius: 22px;
-      padding: 16px 16px 14px;
-      box-shadow: 0 18px 36px rgba(15, 23, 42, .45);
-      border: 1px solid rgba(148, 163, 184, .45);
-    }
-
-    .div5-card h3 {
-      font-size: .98rem;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .pricing-row {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
-
-    .price-line {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      font-size: .86rem;
-    }
-
-    .price-line strong {
-      font-size: 1rem;
-      color: var(--text-dark);
-    }
-
-    .price-line span.badge-inline {
-      font-size: .72rem;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(16, 185, 129, .08);
-      color: #047857;
-    }
-
-    .finance-info {
-      font-size: .74rem;
-      color: var(--text-light);
-      margin-bottom: 6px;
-    }
-
-    .div5-card .btn-primary,
-    .div5-card .btn-ghost {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .divider {
-      height: 1px;
-      background: #e5e7eb;
-      margin: 10px 0;
-    }
-
-    .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: .72rem;
-      color: var(--text-light);
-      align-items: center;
-    }
-
-    .trust-row i {
-      color: #22c55e;
-    }
-
-    /* ===== BAS DE PAGE ===== */
-
-    .div8 {
-      background: rgba(15, 23, 42, .98);
-      border-radius: 22px;
-      padding: 14px 18px;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, .85);
-      color: #e5e7eb;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 14px;
-      font-size: .8rem;
-    }
-
-    .div8-col {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .div8-col h4 {
-      font-size: .86rem;
-    }
-
-    .div8-col p {
-      color: #9ca3af;
-    }
-
-    .div8-col a {
-      color: #a5b4fc;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .div8-col a:hover {
-      text-decoration: underline;
-    }
-
-    .div8-legal {
-      text-align: right;
-      color: #6b7280;
-    }
-
-    /* Harmonisation hauteur des 3 colonnes */
-.div9, .div7, .div5 {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    line-height: 1.6;
 }
 
-/* Permet d'étendre les contenus internes */
-.div7-inner,
-.div5-card,
-.benefit-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Pour la colonne centre : le contenu doit occuper tout l'espace */
-.div7-inner {
-  overflow-y: auto;
-}
-
-/* Pour les colonnes gauche et droite : espace uniforme */
-.div5 {
-  gap: 14px;
-}
-
-.div9 {
-  gap: 14px;
+html {
+    scroll-behavior: smooth;
 }
 
 
-    /* ===== RESPONSIVE ===== */
+/* LIENS */
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    @media (max-width: 1024px) {
-      body {
-        padding: 14px;
-      }
+/* HEADER */
+.header {
+    position: fixed;              /* reste fixé en haut */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
 
-      .parent {
+    /* Au départ : transparent, se confond avec le hero */
+    background: transparent;
+    border-bottom: none;
+    box-shadow: none;
+    backdrop-filter: none;
+
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.menu-toggle {
+    display: none;           /* caché sur desktop */
+    background: transparent;
+    border: none;
+    color: #f9fafb;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+
+
+/* Logo + texte en blanc au-dessus du hero */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #f9fafb;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+.header nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+/* Liens en clair sur le hero */
+.header nav a {
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #e5e7eb;
+    opacity: 0.9;
+    transition: 0.2s ease;
+}
+
+.header nav a:hover {
+    opacity: 1;
+    color: #ffffff;
+}
+
+/* Lien actif dans le header */
+.header nav a.active {
+    color: #2563eb;
+    opacity: 1;
+}
+
+/* Quand le header est scrolled, on garde le même bleu pour l'actif */
+.header.scrolled nav a.active {
+    color: #2563eb;
+}
+
+
+/* Bouton contact en mode overlay */
+.btn-contact {
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.95);
+    color: #fff !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.45);
+}
+
+/* === ÉTAT AU SCROLL : header blanc qui se démarque === */
+.header.scrolled {
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06); 
+    backdrop-filter: blur(16px); 
+}
+
+/* Couleurs quand le header est scrolled (texte foncé) */
+.header.scrolled .logo {
+    color: #2563eb;
+}
+
+.header.scrolled nav a {
+    color: #0f172a;
+    opacity: 0.9;
+}
+
+.header.scrolled nav a:hover {
+    color: #2563eb;
+}
+
+.header.scrolled .btn-contact {
+    background: #2563eb;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+}
+
+
+/* SECTION HERO */
+.hero {
+    position: relative;
+
+    /* Image + gradient overlay assombri et propre */
+    background: 
+        linear-gradient(
+            to bottom right,
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("images/arp8.jpg") center/cover no-repeat;
+
+    padding: 70px 7% 60px;
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    /* Optionnel : adoucit l’image derrière le texte */
+    backdrop-filter: blur(1px);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(58, 114, 125, 0.6));
+    pointer-events: none;
+}
+
+
+.hero-text {
+    flex: 1;
+    max-width: 520px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06); 
+    background: linear-gradient( rgba(58, 114, 125, 0.11));
+    backdrop-filter: blur(10px); 
+    border: 1px solid #0000002f;
+    color: #000000;
+    font-size: 0.75rem;
+    font-weight: 1000;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.hero-text h1 {
+    color: #f9fafb;
+    font-size: 2.7rem;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero-text h1 span {
+    color: #07553B;
+}
+
+.hero-text p {
+    font-size: 0.98rem;
+    color: #faf5c2;
+    margin-bottom: 24px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+/* BOUTONS GLOBAUX */
+.btn-primary,
+.btn-secondary,
+.btn-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 22px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #2563eb, #0ea5e9);
+    color: #fff;
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.35);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 35px rgba(37, 99, 235, 0.45);
+}
+
+.btn-secondary {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.btn-secondary:hover {
+    background: #dbeafe;
+    transform: translateY(-2px);
+}
+
+.btn-light {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+}
+
+.btn-light:hover {
+    background: #e5edff;
+    border-color: #cbd5f5;
+}
+
+/* STATS */
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 6px;
+}
+
+.hero-stats div strong {
+    color: #07553B;
+    display: block;
+    font-size: 1.3rem;
+}
+
+.hero-stats div p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #ffefd1;
+}
+
+/* ILLUSTRATION PRODUIT */
+.hero-illustration {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;   /* pousse le bloc complètement à droite */
+}
+
+
+.product-box {
+    border-radius: 7%;
+    width: 420px;
+    height: 440px;
+    background: radial-gradient(circle at top left, #38bdf8, #2563eb 45%, #0f172a 75%);
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 0;   /* bien collé au bord droit */
+}
+
+
+.product-box img {
+  border-radius: 7%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 12px 25px rgba(15, 23, 42, 0.4));
+}
+
+/* SECTIONS GÉNÉRALES */
+section {
+    padding: 60px 7%;
+}
+
+section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section > p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* FEATURES */
+.features {
+    background: #ffffff;
+}
+
+.grid-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background: #f9fbff;
+    border-radius: 20px;
+    padding: 22px 20px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.03);
+    transition: 0.25s ease;
+}
+
+.feature-card i {
+    width: 38px;
+    height: 38px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0f2fe;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* ==== SECTION CERTIFICATIONS & BREVETS (STYLE PRO LARGE) ==== */
+.certifications-section {
+    padding: 80px 6%;
+    color: #e5e7eb;
+    text-align: center;
+}
+
+.certifications-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.certifications-section > p {
+    color: #9ca3af;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+/* NOUVELLE GRILLE LARGE ET ÉQUILIBRÉE */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* 3 colonnes égales */
+    gap: 28px;
+    max-width: 1400px;   /* occupe bien la longueur */
+    margin: 0 auto;
+}
+
+/* CARTES PLUS GRANDES, PLUS HAUTES ET BIEN VISIBLES */
+.cert-card {
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    border-radius: 24px;
+    padding: 35px 24px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    transition: 0.25s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 32px 55px rgba(0, 0, 0, 0.55);
+}
+
+/* LABEL EN HAUT */
+.cert-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+/* CHIFFRE MIS EN VALEUR */
+.cert-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-bottom: 6px;
+}
+
+/* TEXTE JUSTE SOUS LE CHIFFRE */
+.cert-unit {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #e5e7eb;
+}
+
+/* TEXTE DÉTAILLÉ MAIS LÉGER */
+.cert-sub {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .cert-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 680px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== TARIFS PREMIUM ===== */
+.pricing {
+    padding: 50px 7%;
+    position: relative;
+}
+
+/* Titre */
+.pricing-header h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.pricing-header p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 50px;
+}
+
+/* Grille 2 colonnes */
+.pricing-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+/* Cartes */
+.pricing-card {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 35px 32px;
+    border: 1px solid rgba(200, 210, 230, 0.7);
+    box-shadow: 0px 22px 50px rgba(0, 20, 60, 0.06);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: 0.25s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 28px 60px rgba(0, 20, 60, 0.10);
+}
+
+/* Badge en haut */
+.pricing-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.pricing-badge.gray {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.pricing-badge.blue {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* Carte mise en avant */
+.featured {
+    border: 2px solid #2563eb;
+    box-shadow: 0 30px 70px rgba(37, 99, 235, 0.18);
+}
+
+.featured:hover {
+    box-shadow: 0 35px 90px rgba(37, 99, 235, 0.26);
+}
+
+/* Badge Recommandé */
+.featured-badge {
+    position: absolute;
+    top: -14px;
+    right: 20px;
+    background: #2563eb;
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 999px;
+}
+
+/* Prix */
+.price {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #0f172a;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+/* Liste */
+.pricing-list {
+    list-style: none;
+    margin: 25px 0;
+    padding: 0;
+}
+
+.pricing-list li {
+    margin-bottom: 12px;
+    font-size: 0.98rem;
+    color: #475569;
+}
+
+.pricing-list li::before {
+    content: "✔";
+    color: #22c55e;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Boutons */
+.pricing-btn {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 999px;
+}
+
+
+
+
+/* TESTIMONIALS */
+
+.testimonials{
+   padding-top: 100px;
+  }
+
+.testimonial-grid {
+    max-width: 1040px;
+    margin: 20px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.testimonial-card {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 22px;
+    padding: 20px 20px 22px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04);
+}
+
+.testimonial-card img {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.testimonial-card h4 {
+    font-size: 0.98rem;
+}
+
+.testimonial-card span {
+    font-size: 0.82rem;
+    color: #64748b;
+}
+
+.testimonial-card p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+   color: #9ca3af;
+}
+
+/* CONTACT */
+.contact-section {
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e5e7eb;
+    padding-bottom: 80px;
+}
+
+.contact-section h2 {
+    color: #f9fafb;
+}
+
+.contact-section > p {
+    color: #9ca3af;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 30px 0 28px;
+}
+
+.info-card {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 18px;
+    padding: 20px 20px 18px;
+    border: 1px solid rgba(55, 65, 81, 0.9);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info-card i {
+    width: 36px;
+    height: 36px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37, 99, 235, 0.15);
+    color: #93c5fd;
+}
+
+.info-card h3 {
+    font-size: 0.95rem;
+}
+
+.info-card p {
+    font-size: 0.9rem;
+    color: #d1d5db;
+}
+
+/* FORMULAIRE CONTACT */
+.contact-form {
+    max-width: 780px;
+    margin: 0 auto;
+    background: rgba(15, 23, 42, 0.95);
+    border-radius: 22px;
+    padding: 22px 22px 26px;
+    border: 1px solid rgba(55, 65, 81, 0.9);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-form .row {
+    display: flex;
+    gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    background: #020617;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #6b7280;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.6);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form .btn-primary {
+    align-self: flex-start;
+    padding-inline: 20px;
+    margin-top: 4px;
+}
+
+/* ANIMATION SIMPLE */
+section,
+.header {
+    animation: fadeUp 0.5s ease-out both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-stats {
+        justify-content: flex-start;
+    }
+
+    .hero-illustration {
+        order: -1;
+    }
+
+    .product-box {
+        width: 320px;
+        height: 320px;
+    }
+
+    .grid-features,
+    .pricing-grid,
+    .testimonial-grid,
+    .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding-inline: 5%;
+    }
+
+    .header nav {
+        gap: 14px;
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    section {
+        padding-inline: 5%;
+    }
+
+    .grid-features,
+    .pricing-grid,
+    .testimonial-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form .row {
+        flex-direction: column;
+    }
+
+    .product-box {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding-inline: 5%;
+    }
+
+    /* Bouton burger visible uniquement mobile */
+    .menu-toggle {
+        color: #07553B;
+        display: block;
+        z-index: 110;
+    }
+
+    /* NAV MOBILE EN SLIDE */
+    .header nav {
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 70%;
+        max-width: 280px;
+        height: auto;
+        padding: 18px 20px 24px;
+        background: rgba(15, 23, 42, 0.98);
+        box-shadow: -8px 0 30px rgba(15, 23, 42, 0.4);
+        border-radius: 16px 0 0 16px;
         display: flex;
         flex-direction: column;
         gap: 14px;
-        min-height: auto;
-      }
-
-      .div1,
-      .div5,
-      .div7,
-      .div8,
-      .div9 {
-        grid-column: auto;
-        grid-row: auto;
-        height: auto;
-      }
-
-      .div7 {
-        overflow: visible;
-      }
-
-      .hero-main {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        justify-content: center;
-      }
-
-      .div5 {
-        flex-direction: column;
-      }
-
-      .div8 {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .div8-legal {
-        text-align: left;
-      }
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
     }
 
-    @media (max-width: 640px) {
-      .hero-top {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
+    /* Quand le menu est ouvert */
+    .header.nav-open nav {
+        transform: translateX(0);
+    }
 
-      .hero-cta {
-        flex-direction: column;
-        align-items: stretch;
-      }
+    .header nav a {
+        font-size: 0.95rem;
+        color: #e5e7eb;
+    }
 
-      .btn-primary,
-      .btn-ghost {
+    .header nav a.btn-contact {
+        text-align: center;
         width: 100%;
-        justify-content: center;
-      }
     }
-  </style>
-</head>
+
+    .hero {
+        flex-direction: column;
+        text-align: left;
+        padding-top: 120px; /* laisse la place au header */
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-stats {
+        justify-content: flex-start;
+    }
+
+    .hero-illustration {
+        order: -1;
+    }
+
+    .product-box {
+        width: 280px;
+        height: 280px;
+    }
+
+    .grid-features,
+    .pricing-grid,
+    .testimonial-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form .row {
+        flex-direction: column;
+    }
+}
+
+/* Garde les liens du menu en blanc sur mobile même au scroll */
+@media (max-width: 768px) {
+    .header.scrolled nav a {
+        color: #e5e7eb;      /* texte clair */
+        opacity: 1;
+    }
+
+    .header.scrolled nav a:hover {
+        color: #ffffff;      /* encore plus blanc au survol */
+    }
+
+    /* Optionnel : garder aussi le logo clair en mobile */
+    .header.scrolled .logo {
+        color: #f9fafb;
+    }
+}
+
+
+
+</style>
 <body>
 
-<div class="parent">
-
-  <!-- HERO -->
-  <header class="div1">
-    <div class="hero-top">
-      <div class="brand">
-        <div class="badge">
-        <div class="brand-logo">
-          <img src="images/logo.webp" alt="OlyLife THz Tera-P90">
-        </div>
-        </div>
-        <div class="brand-text">
-          <span>OlyLife • THz Therapy</span>
-          <span>THz Tera-P90</span>
-        </div>
-      </div>
-      <div class="badge">
-        <i class="fa-solid fa-bolt"></i>
-        Technologie THz & infrarouge • Edition 2025
-      </div>
+    <!-- HEADER -->
+    <header class="header">
+    <div class="logo">
+        <img src="images/logo.webp" alt="OlyLife">
     </div>
 
-    <div class="hero-main">
-      <div class="hero-copy">
-        <h1>Votre bien-être, <span>réinventé</span> avec le THz Tera-P90</h1>
-        <p>Un dispositif premium pour la relaxation, la récupération et le confort au quotidien. Disponible en <strong>achat</strong> ou en <strong>location</strong> selon vos besoins.</p>
+    <!-- BOUTON BURGER MOBILE -->
+    <button class="menu-toggle" aria-label="Ouvrir le menu">
+        <i class="fa fa-bars"></i>
+    </button>
 
-        <div class="hero-badges">
-          <div class="hero-badge">
-            <i class="fa-solid fa-shield-heart"></i> Session de démonstration possible
-          </div>
-          <div class="hero-badge">
-            <i class="fa-solid fa-truck-fast"></i> Livraison rapide & installation guidée
-          </div>
-        </div>
+    <nav>
+        <a href="#caracteristiques">Caractéristiques</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact" class="btn-contact">Contact</a>
+    </nav>
+</header>
 
-        <div class="hero-cta">
-          <a href="#achat" class="btn-primary">
-            <i class="fa-solid fa-cart-shopping"></i>
-            Acheter maintenant
-          </a>
-          <a href="#location" class="btn-ghost">
-            <i class="fa-solid fa-calendar-check"></i>
-            Louer pour essayer
-          </a>
-        </div>
-      </div>
 
-      <div class="hero-visual">
-        <div class="hero-glow"></div>
-        <div class="hero-card">
-          <div class="hero-product-img">
-            <img src="images/IMG-20251106-WA0009.jpg" alt="OlyLife THz Tera-P90">
-          </div>
-          <div class="hero-card-footer">
-            <div>
-              <div style="font-size:.76rem;color:#9ca3af;">OlyLife THz Tera-P90</div>
-              <div style="font-size:.74rem;color:#d1d5db;">Plateforme de thérapie & relaxation</div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="top">
+        <div class="hero-text">
+            <span class="badge">THz Tera-P90 · Nouvelle Génération</span>
+            <h1>Plateforme de Bien-Être <span>THz</span> pour le Corps</h1>
+            <p>
+                Le <strong>OlyLife THz Tera-P90</strong> est un dispositif innovant qui utilise la technologie
+                <strong>Terahertz</strong> pour stimuler la circulation, soulager les tensions et améliorer le confort
+                général du corps. Disponible en <strong>vente</strong> et en <strong>location</strong>.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#tarifs" class="btn-primary">
+                    <i class="fa fa-shopping-cart"></i> Acheter le Tera-P90
+                </a>
+                <a href="#tarifs" class="btn-secondary">
+                    <i class="fa fa-handshake"></i> Louer pour Essai
+                </a>
             </div>
-            <span class="price">à partir de  / <small>mois</small></span>
-          </div>
+
+            <div class="hero-stats">
+                <div>
+                    <strong>158+</strong>
+                    <p>Brevet(s) associé(s)</p>
+                </div>
+                <div>
+                    <strong>Certifié</strong>
+                    <p>ISO · FDA · SGS · HACCP</p>
+                </div>
+                <div>
+                    <strong>Usage</strong>
+                    <p>Maison & Cabinet Pro</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
 
-  <!-- COLONNE GAUCHE : AVANTAGES -->
-  <aside class="div9">
-    <div class="benefit-card">
-      <h3><i class="fa-solid fa-wave-square"></i> Technologie THz ciblée</h3>
-      <p>Combine ondes térahertz, chaleur douce et vibrations pour une sensation de détente globale.</p>
-      <div class="benefit-chip-row">
-        <div class="benefit-chip"><i class="fa-solid fa-circle-dot"></i> Stimulation ciblée</div>
-        <div class="benefit-chip"><i class="fa-solid fa-temperature-three-quarters"></i> Chaleur contrôlée</div>
-      </div>
-      <ul class="benefit-list">
-        <li><i class="fa-solid fa-check"></i><span>Fréquence et intensité ajustables selon la sensibilité de chacun.</span></li>
-        <li><i class="fa-solid fa-check"></i><span>Séances courtes de 10–20 minutes faciles à intégrer dans la journée.</span></li>
-      </ul>
-    </div>
-
-    <div class="benefit-card">
-      <h3><i class="fa-solid fa-person-rays"></i> Confort & récupération</h3>
-      <p>Idéal après une longue journée de travail, une séance de sport ou en complément d’un suivi bien-être.</p>
-      <div class="benefit-chip-row">
-        <div class="benefit-chip"><i class="fa-solid fa-heart-pulse"></i> Relaxation</div>
-        <div class="benefit-chip"><i class="fa-solid fa-bed"></i> Qualité du sommeil</div>
-      </div>
-      <ul class="benefit-list">
-        <li><i class="fa-solid fa-check"></i><span>Utilisation possible assis, debout ou en position relax sur fauteuil.</span></li>
-        <li><i class="fa-solid fa-check"></i><span>Accompagne la récupération musculaire après l’effort ou les longues stations debout.</span></li>
-      </ul>
-    </div>
-
-    <div class="benefit-card">
-      <h3><i class="fa-solid fa-house-chimney-medical"></i> Pensé pour la maison & le cabinet</h3>
-      <p>Format compact et design premium pour un usage domestique, spa, cabinet ou centre de bien-être.</p>
-      <div class="benefit-chip-row">
-        <div class="benefit-chip"><i class="fa-solid fa-volume-xmark"></i> Ultra silencieux</div>
-        <div class="benefit-chip"><i class="fa-solid fa-shoe-prints"></i> Surface antidérapante</div>
-      </div>
-      <ul class="benefit-list">
-        <li><i class="fa-solid fa-check"></i><span>Se déplace facilement d’une pièce à l’autre ou d’un cabinet à un autre.</span></li>
-        <li><i class="fa-solid fa-check"></i><span>Nettoyage rapide de la surface après chaque séance pour un usage partagé.</span></li>
-      </ul>
-    </div>
-
-    <div class="benefit-card">
-      <h3><i class="fa-solid fa-circle-play"></i> Séances guidées & accompagnement</h3>
-      <p>Pas besoin d’être expert : le Tera-P90 a été pensé pour être simple à prendre en main.</p>
-      <ul class="benefit-list">
-        <li><i class="fa-solid fa-check"></i><span>Programmes pré-enregistrés pour les premières séances.</span></li>
-        <li><i class="fa-solid fa-check"></i><span>Possibilité d’être accompagné à distance pour optimiser l’utilisation.</span></li>
-      </ul>
-    </div>
-  </aside>
-
-  <!-- COLONNE CENTRALE : FICHE TECHNIQUE / DETAILS -->
-  <main class="div7">
-    <div class="div7-inner">
-      <div class="section-header">
-        <div>
-          <h2>Détails & caractéristiques techniques</h2>
-          <span>Une plateforme complète pour vos séances de bien-être.</span>
+        <div class="hero-illustration">
+            <div class="product-box">
+                <!-- Image principale du produit -->
+                <!-- Remplace "tera-p90.jpg" par le vrai nom du fichier si besoin -->
+                <img src="images/IMG-20251106-WA0009.jpg" alt="OlyLife THz Tera-P90">
+            </div>
         </div>
-        <span><i class="fa-solid fa-circle-info"></i> Fiche produit</span>
-      </div>
+    </section>
 
-      <div class="specs-grid">
-        <div class="spec-item">
-          <span class="label">Modèle</span>
-          <span class="value">OlyLife THz Tera-P90</span>
-        </div>
-        <div class="spec-item">
-          <span class="label">Modes</span>
-          <span class="value">Plusieurs programmes automatiques</span>
-        </div>
-        <div class="spec-item">
-          <span class="label">Surface</span>
-          <span class="value">Plaques métalliques haute conductivité</span>
-        </div>
-        <div class="spec-item">
-          <span class="label">Utilisation</span>
-          <span class="value">Pieds, jambes & zones ciblées</span>
-        </div>
-        <div class="spec-item">
-          <span class="label">Alimentation</span>
-          <span class="value">220–240V • Basse consommation</span>
-        </div>
-        <div class="spec-item">
-          <span class="label">Poids</span>
-          <span class="value">Compact & facilement transportable</span>
-        </div>
-      </div>
+    <!-- FONCTIONNALITÉS / BÉNÉFICES -->
+    <section class="features" id="caracteristiques">
+        <h2>Pourquoi Choisir le OlyLife THz Tera-P90 ?</h2>
+        <p>Un appareil complet pour le bien-être, la récupération et la relaxation.</p>
 
-      <div class="highlight-strip">
-        <i class="fa-solid fa-leaf"></i>
-        <div>
-          Solution non invasive, silencieuse et simple d’utilisation. Une séance se lance en quelques secondes, sans préparation compliquée.
+        <div class="grid-features">
+            <div class="feature-card">
+                <i class="fa fa-spa"></i>
+                <h3>Relaxation Profonde</h3>
+                <p>
+                    Aide à détendre les muscles, réduire les tensions et offrir une sensation de
+                    bien-être global après chaque utilisation.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa fa-heart-pulse"></i>
+                <h3>Stimulation de la Circulation</h3>
+                <p>
+                    La technologie THz favorise une meilleure circulation sanguine et énergétique
+                    dans le corps.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa fa-house-chimney-medical"></i>
+                <h3>Usage Maison & Pro</h3>
+                <p>
+                    Idéal pour une utilisation personnelle à domicile, mais aussi pour
+                    les cabinets, spas, centres de bien-être.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa fa-clock-rotate-left"></i>
+                <h3>Sessions Rapides</h3>
+                <p>
+                    Des séances courtes, faciles à intégrer dans une routine quotidienne, avec un
+                    panneau de contrôle simple.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa fa-shield-heart"></i>
+                <h3>Certifications Internationales</h3>
+                <p>
+                    Appareil soutenu par des <strong>certifications officielles</strong> et plus de
+                    <strong>158 brevets</strong> liés à la technologie.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa fa-hand-holding-medical"></i>
+                <h3>Programme Vente & Location</h3>
+                <p>
+                    Possibilité d'<strong>acheter</strong> ou de <strong>louer</strong> le Tera-P90
+                    pour tester avant investissement complet.
+                </p>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- DEMONSTRATION VIDEO -->
-      <div class="video-card">
-        <div class="video-wrapper">
-          <video controls>
-            <source src="images/VID-20251106-WA0003.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la lecture vidéo.
-          </video>
-        </div>
-        <div class="video-meta">
-          Démonstration THz Tera-P90
-          <span>Découvrez le fonctionnement réel de l’appareil pendant une séance, de la mise en route jusqu’à la fin du programme.</span>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <!-- COLONNE DROITE : OFFRES VENTE / LOCATION -->
-  <section class="div5">
-
-    <div class="div5-card" id="achat">
-      <h3><i class="fa-solid fa-cart-shopping"></i> Offre d’achat</h3>
-
-      <div class="pricing-row">
-        <div class="price-line">
-          <span>Prix unitaire conseillé</span>
-          <strong>… F CFA</strong>
-        </div>
-        <div class="price-line">
-          <span>Paiement en plusieurs fois</span>
-          <span class="badge-inline"><i class="fa-solid fa-credit-card"></i> options disponibles</span>
-        </div>
-      </div>
-
-      <p class="finance-info">
-        Livraison premium, formation rapide à l’utilisation et support en ligne inclus. Garantie fabricant selon votre stock.
-      </p>
-
-      <ul class="offer-list">
-        <li><i class="fa-solid fa-check"></i><span>Appareil neuf THz Tera-P90 avec accessoires complets.</span></li>
-        <li><i class="fa-solid fa-check"></i><span>Câble d’alimentation, manuel d’utilisation en français et conseils de mise en route.</span></li>
-        <li><i class="fa-solid fa-check"></i><span>Session d’installation et de prise en main (en visio ou sur place selon votre zone).</span></li>
-        <li><i class="fa-solid fa-check"></i><span>Support WhatsApp / téléphone pour répondre à vos questions au quotidien.</span></li>
-      </ul>
-
-      <a href="commande_achat.php" class="btn-primary" style="margin-top:10px;">
-        <i class="fa-solid fa-bag-shopping"></i> Commander le produit
-      </a>
-
-      <div class="divider"></div>
-
-      <div class="trust-row">
-        <i class="fa-solid fa-shield-halved"></i>
-        <span>Garantie, facture & suivi personnalisés.</span>
-      </div>
+       <!-- TARIFS VENTE & LOCATION – VERSION PREMIUM -->
+<section class="pricing" id="tarifs">
+    <div class="pricing-header">
+        <h2>Tarifs Vente & Location</h2>
+        <p>Choisissez la formule qui correspond le mieux à votre besoin.</p>
     </div>
 
-    <div class="div5-card" id="location">
-      <h3><i class="fa-solid fa-calendar-days"></i> Offre de location</h3>
+    <div class="pricing-grid">
+        
+        <!-- LOCATION -->
+        <div class="pricing-card pricing-left">
+            <div class="pricing-top">
+                <span class="pricing-badge gray">Location</span>
+                <h3>Location Mensuelle</h3>
+                <p class="price">14 900 Fr <span>/ mois</span></p>
+            </div>
 
-      <div class="pricing-row">
-        <div class="price-line">
-          <span>À partir de</span>
-          <strong>… F CFA / mois</strong>
+            <ul class="pricing-list">
+                <li>Accès au Tera-P90 complet</li>
+                <li>Installation & prise en main</li>
+                <li>Support technique permanent</li>
+                <li>Contrat flexible</li>
+            </ul>
+
+            <a href="#contact" class="btn-primary pricing-btn">Louer Maintenant</a>
         </div>
-        <div class="price-line">
-          <span>Durée minimale</span>
-          <span class="badge-inline"><i class="fa-solid fa-clock-rotate-left"></i> ex : 1 à 3 mois</span>
+
+        <!-- ACHAT -->
+        <div class="pricing-card pricing-right featured">
+            <div class="featured-badge">Recommandé</div>
+
+            <div class="pricing-top">
+                <span class="pricing-badge blue">Achat Unique</span>
+                <h3>Achat du OlyLife Tera-P90</h3>
+                <p class="price">151 900 Fr</p>
+            </div>
+
+            <ul class="pricing-list">
+                <li>Propriété complète</li>
+                <li>Garantie constructeur</li>
+                <li>Support personnalisé</li>
+                <li>Idéal cabinet / usage intensif</li>
+            </ul>
+
+            <a href="#contact" class="btn-primary pricing-btn">Acheter Maintenant</a>
         </div>
-      </div>
 
-      <p class="finance-info">
-        Parfait pour tester l’appareil dans votre centre ou à domicile. Installation accompagnée et option d’achat en fin de contrat.
-      </p>
-
-      <ul class="offer-list">
-        <li><i class="fa-solid fa-check"></i><span>Appareil contrôlé, testé et désinfecté avant chaque nouvelle location.</span></li>
-        <li><i class="fa-solid fa-check"></i><span>Assistance à distance pendant toute la durée de la location.</span></li>
-        <li><i class="fa-solid fa-check"></i><span>Possibilité de renouveler la location ou de basculer vers l’achat à tarif préférentiel.</span></li>
-        <li><i class="fa-solid fa-check"></i><span>Idéal pour centres de bien-être qui souhaitent mesurer l’intérêt de leur clientèle.</span></li>
-      </ul>
-
-      <a href="demande_location.php" class="btn-ghost" style="margin-top:10px;">
-        <i class="fa-solid fa-pen-to-square"></i> Demander une location
-      </a>
-
-      <div class="divider"></div>
-
-      <div class="trust-row">
-        <i class="fa-solid fa-users"></i>
-        <span>Solution idéale pour spas, cabinets, studios et particuliers curieux.</span>
-      </div>
     </div>
+</section>
 
-  </section>
 
-  <!-- BAS DE PAGE / INFO RAPIDE -->
-  <footer class="div8">
-    <div class="div8-col">
-      <h4>Pour qui est fait le THz Tera-P90 ?</h4>
-      <p>Pour les particuliers, centres de bien-être, spas, salons, thérapeutes ou coachs qui souhaitent proposer une expérience premium.</p>
-    </div>
-    <div class="div8-col">
-      <h4>Livraison & support</h4>
-      <p>Livraison sur rendez-vous, assistance vidéo et accompagnement à distance après installation.</p>
-    </div>
-    <div class="div8-col div8-legal">
-      <p>&copy; <?php echo date("Y"); ?> OlyLife – THz Tera-P90.</p>
-      <p>Infos & commandes : <a href="mailto:contact@votre-boutique.com">contact@votre-boutique.com</a></p>
-    </div>
-  </footer>
 
-</div>
+
+
+        <!-- CERTIFICATIONS & BREVETS -->
+        <!-- CERTIFICATIONS & BREVETS (CHIFFRES CLÉS) -->
+    <section class="certifications-section" id="certifications">
+        <h2>Certifications & Brevets</h2>
+        <p>Des indicateurs clés qui témoignent de la fiabilité et de l’innovation du OlyLife THz Tera-P90.</p>
+
+        <div class="cert-grid">
+            <!-- Brevets -->
+            <div class="cert-card">
+                <div class="cert-label">Innovation</div>
+                <div class="cert-number">158+</div>
+                <div class="cert-unit">brevets liés à la technologie THz</div>
+                <div class="cert-sub">Un socle technologique protégé à l’international.</div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="cert-card">
+                <div class="cert-label">Conformité</div>
+                <div class="cert-number">4</div>
+                <div class="cert-unit">certifications majeures</div>
+                <div class="cert-sub">ISO · FDA · SGS · HACCP (qualité, sécurité, traçabilité).</div>
+            </div>
+
+            <!-- Confiance / présence -->
+            <div class="cert-card">
+                <div class="cert-label">Confiance</div>
+                <div class="cert-number">10 000+</div>
+                <div class="cert-unit">utilisateurs</div>
+                <div class="cert-sub">Adopté par des centres et particuliers dans plusieurs régions.</div>
+            </div>
+        </div>
+
+        <!-- TÉMOIGNAGES (optionnel pour crédibilité) -->
+    <!-- <section class="testimonials">
+        <h2>Ils Utilisent le THz Tera-P90</h2>
+        <p>Retours d'expérience de clients et professionnels.</p>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <img src="images/client1.jpg" alt="">
+                <h4>Centre Bien-Être Harmonie</h4>
+                <span>Propriétaire</span>
+                <p>"Nos clients adorent les séances avec le Tera-P90. Les retours sont très positifs sur la relaxation et le confort."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="images/client2.jpg" alt="">
+                <h4>Michel K.</h4>
+                <span>Utilisateur à domicile</span>
+                <p>"Facile à utiliser à la maison. Je ressens une vraie détente après chaque session."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="images/client3.jpg" alt="">
+                <h4>Cabinet Vitalité Plus</h4>
+                <span>Praticien</span>
+                <p>"Un outil complémentaire intéressant dans notre approche globale de bien-être."</p>
+            </div>
+        </div>
+    </section>-->
+    </section>
+    
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <h2>Contactez-Nous pour le Tera-P90</h2>
+        <p>Questions, devis, partenariat ou démonstration ? Écrivez-nous.</p>
+
+        <div class="contact-grid">
+            <div class="info-card">
+                <i class="fa fa-envelope"></i>
+                <h3>Email</h3>
+                <p>olylife@gmail.com</p>
+            </div>
+
+            <div class="info-card">
+                <i class="fa fa-phone"></i>
+                <h3>Téléphone / WhatsApp</h3>
+                <p>+225 01 02 03 04 05</p>
+            </div>
+
+            <div class="info-card">
+                <i class="fa fa-location-dot"></i>
+                <h3>Zone</h3>
+                <p>Abidjan, Cote d'ivoire</p>
+            </div>
+        </div>
+    </section>
 
 </body>
+<script>
+    const header = document.querySelector('.header');
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.header nav a[href^="#"]');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    // Header scrolled + lien actif
+    window.addEventListener('scroll', function () {
+        // Gestion du header scrolled
+        if (window.scrollY > 80) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Détection de la section active
+        let currentId = '';
+
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const sectionTop = rect.top;
+            const sectionHeight = rect.height;
+
+            if (sectionTop <= 150 && (sectionTop + sectionHeight) > 150) {
+                currentId = section.id;
+            }
+        });
+
+        // Mise à jour des liens du menu
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (currentId && href === `#${currentId}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Scroll fluide avec décalage du header
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
+
+            if (target) {
+                const headerHeight = header.offsetHeight;
+                const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerHeight - 10;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+
+            // Fermer le menu après clic sur mobile
+            header.classList.remove('nav-open');
+        });
+    });
+
+    // Toggle menu mobile
+    menuToggle.addEventListener('click', function () {
+        header.classList.toggle('nav-open');
+    });
+</script>
+
+
 </html>
